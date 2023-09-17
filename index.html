@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/style.css" />
+    <title>Coding Assessment</title>
+  </head>
+  <body>
+    <nav class="navbar bg-body-tertiary container-fluid">
+      <form class="container-fluid justify-content-start">
+        <button class="btn btn-outline-success me-2 score-button" type="button">View High Scores</button>
+        <span class="navbar-text countdown">Time Remaining</span>
+      </form>
+    </nav>
+    <main>
+      <form class="endScreen">
+        <div class="mb-3 endGame">
+          <h1 class="text-center">Game Over! <br> Score: <div class="score"></div></h1>
+          <label for="userName" class="form-label" id="userName">Enter Your Name</label>
+          <input type="name" class="form-control w-50" id="playerName" aria-describedby="playerName">
+          <button type="submit" class="btn btn-danger rank-btn">See Your Rank</button>
+        </div>
+      </form>
+    <section id="currentQuestion"></section>
+    <section id="right-wrong"></section>
+    <section id="start-page">
+      <h1 class="text-center">Coding Quiz Challenge</h1>
+      <section>
+        <p class="text-center start-page-text">You have 15 seconds to answer as many questions as possible. Every correct answer earns you 2 points. Every wrong answer deducts 3 seconds from your remaining time. Good luck!</p>
+      </section>
+    <div class="d-grid gap-2 col-6 mx-auto">
+    <button type="button" class="btn btn-danger btn-lg start-button">Start Challenge</button>
+    </div>
+    </section>
+    </main>
+    
+    <section class="question" id="question1">
+      <h1 class ="text-center">What does CSS stand for?</h1>
+      <ul class="choices">
+        <li><button type="button" class="btn choice vwrong"id="choice1A">Coding Style Sheets</button></li>
+        <li><button type="button" class="btn choice right-choice" id="choice1B">Cascading Style Sheets</button></li>
+        <li><button type="button" class="btn choice wrong" id="choice1C">Crypto Sheet Stack</button></li>
+        <li><button type="button" class="btn choice wrong"id="choice1D">Color Specific Styling</button></li>
+      </ul>
+    </section>
+
+    <section class="question" id="question2">
+      <h1 class ="text-center">________ HTML elements are those that <br>clearly describe their meaning in a readable way.</h1>
+      <ul class="choices">
+        <li><button type="button" class="btn choice wrong"id="choice2A">Symbolic</button></li>
+        <li><button type="button" class="btn choice wrong" id="choice2B">Systemic</button></li>
+        <li><button type="button" class="btn choice right-choice" id="choice2C">Semantic</button></li>
+        <li><button type="button" class="btn choice wrong"id="choice2D">Specific</button></li>
+      </ul>
+    </section>
+
+    <section class="question" id="question3">
+      <h1 class ="text-center">In an HTML file, where should the script<br> tag for the JavaScript file be placed?</h1>
+      <ul class="choices">
+        <li><button type="button" class="btn choice right-choice"id="choice3A">In the last line of the body element</button></li>
+        <li><button type="button" class="btn choice wrong" id="choice3B">Below the CSS link in the head element</button></li>
+        <li><button type="button" class="btn choice wrong" id="choice3C">In its own element</button></li>
+        <li><button type="button" class="btn choice wrong"id="choice3D">In the first line of the HTML file</button></li>
+      </ul>
+    </section>
+
+    <section class="question" id="question4">
+      <h1 class ="text-center">The ______ method prevents further propogation af the <br>current event in the capturing and bubbling phases.</h1>
+      <ul class="choices">
+        <li><button type="button" class="btn choice right-choice"id="choice4A">stopPropogation()</button></li>
+        <li><button type="button" class="btn choice wrong" id="choice4B">endPropogation()</button></li>
+        <li><button type="button" class="btn choice wrong" id="choice4C">stopBubbling()</button></li>
+        <li><button type="button" class="btn choice wrong"id="choice4D">endBubbling()</button></li>
+      </ul>
+    </section>
+
+    <section class="question" id="question5">
+      <h1 class ="text-center">The ______ method cancels a timed, repeating action <br> was previously established by a call to setInterval().</h1>
+      <ul class="choices">
+        <li><button type="button" class="btn choice wrong"id="choice5A">endInterval()</button></li>
+        <li><button type="button" class="btn choice wrong" id="choice5B">cancelInterval()</button></li>
+        <li><button type="button" class="btn choice wrong" id="choice5C">stopInterval()</button></li>
+        <li><button type="button" class="btn choice right-choice"id="choice5D">clearInterval()</button></li>
+      </ul>
+    </section>
+
+    <section class="question" id="question6">
+      <h1 class ="text-center">What is the web browser?</h1>
+      <ul class="choices">
+        <li><button type="button" class="btn choice right-choice"id="choice6A">The software that we use for browsing on the internet<br> and displaying images</button></li>
+        <li><button type="button" class="btn choice wrong" id="choice6B">A set of statements that run one after another</button></li>
+        <li><button type="button" class="btn choice wrong" id="choice6C">A program built intp the browser that executes JavaScript code</button></li>
+        <li><button type="button" class="btn choice wrong"id="choice6D">A software that provides its uders with the documents <br> they request via their web browser</button></li>
+      </ul>
+    </section>
+
+    <section class="question" id="question7">
+      <h1 class ="text-center">In CSS, .hover is a(n) _______ selector.</h1>
+      <ul class="choices">
+        <li><button type="button" class="btn choice wrong"id="choice7A">secondary class</button></li>
+        <li><button type="button" class="btn choice wrong" id="choice7B">class</button></li>
+        <li><button type="button" class="btn choice right-choice" id="choice7C">psuedo-class</button></li>
+        <li><button type="button" class="btn choice wrong"id="choice7D">ID</button></li>
+      </ul>
+    </section>
+
+    <section class="question" id="question8">
+      <h1 class ="text-center">_______ is the process of creating a screen blueprint, or <br>visual guide of the framework of a webpage.</h1>
+      <ul class="choices">
+        <li><button type="button" class="btn choice wrong"id="choice8A">Pseudo-coding</button></li>
+        <li><button type="button" class="btn choice wrong" id="choice8B">Outlining</button></li>
+        <li><button type="button" class="btn choice wrong" id="choice8C">Sketching up</button></li>
+        <li><button type="button" class="btn choice right-choice"id="choice8D">Wireframing</button></li>
+      </ul>
+    </section>
+
+    <section class="question" id="question9">
+      <h1 class ="text-center">From the outermost layer working inwards, what is<br> the order of the CSS box model?</h1>
+      <ul class="choices">
+        <li><button type="button" class="btn choice wrong"id="choice9A">content>padding>border>margin</button></li>
+        <li><button type="button" class="btn choice right-choice" id="choice9B">margin>border>padding>content</button></li>
+        <li><button type="button" class="btn choice wrong" id="choice9C">content>border>padding>margin</button></li>
+        <li><button type="button" class="btn choice wrong"id="choice9D">margin>padding>border>content</button></li>
+      </ul>
+    </section>
+
+    <section class="question" id="question10">
+      <h1 class ="text-center">in JavaScript, ______ is short for constant, meaning<br> the value of the variable should not change. </h1>
+      <ul class="choices">
+        <li><button type="button" class="btn choice wrong"id="choice10A">cnst</button></li>
+        <li><button type="button" class="btn choice right-choice" id="choice10B">const</button></li>
+        <li><button type="button" class="btn choice wrong" id="choice10C">cnstnt</button></li>
+        <li><button type="button" class="btn choice wrong"id="choice10D">con</button></li>
+      </ul>
+    </section>
+ 
+  <script src="assets/script.js"></script>
+  </body>

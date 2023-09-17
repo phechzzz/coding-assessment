@@ -1,0 +1,46 @@
+.navbar{
+    margin-bottom: 100px;
+}
+.start-page{
+    padding: 100px;
+}
+
+.start-page-text{
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 24px;
+}
+
+.countdown{
+    font-weight: 500;
+    color: blueviolet;
+}
+
+.question{
+    display: none;
+    
+}
+.choices{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: center;
+    padding-top: 50px;
+}
+.choice{
+    background-color: #ff99ff;
+    margin: 4px;
+}
+.endGame{
+    margin-left: 150px;
+    margin-right: 150px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.endScreen{
+    display: none;
+}
