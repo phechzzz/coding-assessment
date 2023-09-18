@@ -10,19 +10,22 @@ var timeCount = []
 var userScore = document.querySelector('.score')
 var rankButton = document.querySelector('.rank-btn')
 userScore.textContent = score
+var highscores = document.querySelector('.highscores')
 
 function showLeaderboard(){
-// create a display to show scores in an organized manner
-//
-//
-
+highscores.innerHTML = ""
+var li = document.createElement('li')
+li.textContent = JSON.parse(localStorage.getItem('scoreName'))
+highscores.appendChild(li)
 }
 
-function storeScores(){
-var userName =  document.getElementById('playerName')   
+function storeScores(event){
+event.preventDefault();
+  var userNameInput =  document.getElementById('playerName')
+var userName = userNameInput.value
 var nameScore = [score, userName]
 var nameScoreStringify = JSON.stringify(nameScore)
-localStorage.setItem('scoreName', nameScore)
+localStorage.setItem('scoreName', nameScoreStringify)
 showLeaderboard()
 }
 
@@ -113,7 +116,9 @@ function startGame() {
 startButton.addEventListener('click', startGame);
 console.log();
 
-rankButton.addEventListener('click', storeScores)
+rankButton.addEventListener('click', function(event) {
+storeScores(event)
+})
 
 scoreButton.addEventListener('click', showLeaderboard)
 
